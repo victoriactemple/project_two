@@ -14,7 +14,7 @@ const PlantSchema = new Schema ({
         unique: true,
     },
     decription: String,
-    image: String, 
+    img: String, 
     price: Number,
     edible: Boolean
 })

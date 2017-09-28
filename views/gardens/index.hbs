@@ -1,0 +1,21 @@
+<div>
+
+    <h1>The Garden Path</h1>
+
+    <h3>Some Plants</h3>
+<div>
+<a href = "/gardens/new">Add a new Plant</a>
+</div>
+
+
+{{#each plants}}
+<div>
+    {{this.name}}
+    {{this.description}}
+    {{this.img}}
+    {{this.price}}
+    {{this.edible}}
+</div>
+{{/each}}
+
+</div>
