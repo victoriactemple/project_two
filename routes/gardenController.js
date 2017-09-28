@@ -45,7 +45,7 @@ router.get('/:plantId', (req, res) => {
 
         res.render('plants/show', {
             plant: plant,
-            gardenId: gardenId
+            garden: garden
         })
     })
     .catch((error) => {
