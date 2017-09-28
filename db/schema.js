@@ -3,12 +3,12 @@ const mongoose = require('mongoose');
 // First we instantiate a namespace for the Schema constructor defined by mongoose
 const Schema = mongoose.Schema;
 
-const user = new Schema ({
-    name: String,
-    email: String,
-})
+// const User = new Schema ({
+//     name: String,
+//     email: String,
+// })
 
-const plantSchema = new Schema ({
+const PlantSchema = new Schema ({
     name: {
         type: String,
         unique: true,
@@ -20,23 +20,23 @@ const plantSchema = new Schema ({
 })
 
 
-const gardenSchema = new Schema ({
+const GardenSchema = new Schema ({
     name: {
         type: String,
         unique: true
     },
     country: String,
-    plants: [plantSchema]
+    plants: [PlantSchema]
 
 })
 
 const GardenModel = mongoose.model('Garden', GardenSchema)
 const PlantModel = mongoose.model('Plant', PlantSchema)
-const UserModel = mongoose.model('User', UserSchema)
+// const UserModel = mongoose.model('User', UserSchema)
 
-model.exports = {
+module.exports = {
     GardenModel: GardenModel,
     PlantModel: PlantModel,
-    UserModel: UserModel
+    // UserModel: UserModel
 
 }

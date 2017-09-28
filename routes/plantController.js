@@ -2,13 +2,13 @@ const express = require('express')
 const router = express.Router()
 
 const Schema = require("../db/schema.js")
-const GardenModel = Schema.GardenModel
+const PlantModel = Schema.PlantModel
 
 
 //INDEX ROUTE
 
 router.get('/', (req, res) => {
-    res.send("You're on the Garden Page Now")
+    res.send("You're on the Plant Page Now")
 })
 
 module.exports = router
