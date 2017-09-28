@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 
+
 const Schema = require("../db/schema.js")
 const GardenModel = Schema.GardenModel
 
@@ -21,5 +22,38 @@ router.get('/', (req, res) => {
     })
 
 })
+
+// NEW PLANT ROUTE
+
+router.get('/new', (req, res) => {
+    res.render('gardens/new')
+})
+
+
+
+
+// SHOW A PLANT
+
+router.get('/:plantId', (req, res) => {
+    const gardenId = req.params.gardenId
+
+    const plantId = req.params.plantId
+
+    GardenModel.findOne(gardenId)
+    .then((garden) => {
+        const plant = garden.plants.id(plantId)
+
+        res.render('plants/show', {
+            plant: plant,
+            gardenId: gardenId
+        })
+    })
+    .catch((error) => {
+        console.log(error)
+    })
+})
+
+
+
 
 module.exports = router
