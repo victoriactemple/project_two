@@ -9,10 +9,11 @@ const GardenModel = Schema.GardenModel
 
 router.get('/', (req, res) => {
     // res.send("You're on the Garden Page Now")
-    GardenModel.find({})
-    .then((gardens) =>{
+    GardenModel.findOne({})
+    .then((garden) =>{
+        console.log(garden.plants)
         res.render('gardens/index', {
-            gardens: gardens
+            garden: garden
         })
     })
     .catch((error) => {

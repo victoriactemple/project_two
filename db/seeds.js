@@ -3,6 +3,8 @@ require('dotenv').config();
 // Database setup
 var mongoose = require('mongoose');
 
+mongoose.Promise = global.Promise
+
 mongoose.connect(process.env.MONGODB_URI)
 const db = mongoose.connection;
 // Will log an error if db can't connect to MongoDB
@@ -19,7 +21,9 @@ const Schema = require("./schema.js")
 const GardenModel = Schema.GardenModel
 const PlantModel = Schema.PlantModel
 
-
+GardenModel.remove({}, function (err) {
+    console.log(err);
+});
 //Create a Garden
 const gardenPath = new GardenModel({name: "Victoria's Garden", country: "USA"})
 
@@ -31,7 +35,7 @@ const basil = new PlantModel({
     img: "https://foodartist.files.wordpress.com/2011/02/herb-basil.jpg",
     price: 3,
     edible: true
-}),
+})
 
 const dill = new PlantModel({
     name: "Dill",
@@ -39,31 +43,31 @@ const dill = new PlantModel({
     img: "https://foodartist.files.wordpress.com/2011/02/herb-basil.jpg",
     price: 3,
     edible: true
-}),
+})
 
 const chives = new PlantModel({
     name: "Chive",
     description: "Excellent on a baked potato if that's your thing",
-    img: "https://foodartist.files.wordpress.com/2011/02/herb-basil.jpg",
+    img: "http://www.sallypond.co.uk/wp-content/uploads/2016/05/chives-watermarked.jpg",
     price: 3,
     edible: true
-}),
+})
 
 const catnip = new PlantModel({
-    name: "Catnp",
+    name: "Catnip",
     description: "Your cats will love this herbal treat",
-    img: "https://foodartist.files.wordpress.com/2011/02/herb-basil.jpg",
+    img: "http://pfaf.org/Admin/PlantImages/NepetaCataria.jpg",
     price: 3,
     edible: true
-}),
+})
 
 const mint = new PlantModel({
     name: "Mint",
     description: "A multitude of varieties -- peppermint, spearmint, chocolate-mint even",
-    img: "https://foodartist.files.wordpress.com/2011/02/herb-basil.jpg",
+    img: "http://2.bp.blogspot.com/-ptorspDmdFI/UQWEomK6mEI/AAAAAAAAAFg/o69e4z09cvg/s1600/peppermint.png",
     price: 3,
     edible: true
-}),
+})
 
 const giantHogWeed = new PlantModel({
     name: "Giant Hog Weed",
@@ -71,7 +75,7 @@ const giantHogWeed = new PlantModel({
     img: "https://foodartist.files.wordpress.com/2011/02/herb-basil.jpg",
     price: 1,
     edible: false
-}),
+})
 
 const gardens =[gardenPath]
 const plants = [basil, dill, chives, catnip, mint, giantHogWeed]

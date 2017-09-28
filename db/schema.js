@@ -1,5 +1,8 @@
 const mongoose = require('mongoose');
 
+mongoose.Promise = global.Promise
+
+
 // First we instantiate a namespace for the Schema constructor defined by mongoose
 const Schema = mongoose.Schema;
 
