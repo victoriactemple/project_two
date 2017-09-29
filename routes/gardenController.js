@@ -75,24 +75,26 @@ router.get('/:gardenId/edit', (req, res) => {
 
 // SHOW A PLANT THS IS WORKING
 
-router.get('/:plantId', (req, res) => {
-    const gardenId = req.params.gardenId
+// router.get('/:plantId', (req, res) => {
+//     const gardenId = req.params.gardenId
 
-    const plantId = req.params.plantId
+//     const plantId = req.params.plantId
 
-    GardenModel.findOne(gardenId)
-    .then((garden) => {
-        const plant = garden.plants.id(plantId)
+//     GardenModel.findOne(gardenId)
+//     .then((garden) => {
+//         const plant = garden.plants.id(plantId)
 
-        res.render('plants/show', {
-            plant: plant,
-            garden: garden
-        })
-    })
-    .catch((error) => {
-        console.log(error)
-    })
-})
+//         res.render('plants/show', {
+//             plant: plant,
+//             garden: garden
+//         })
+//     })
+//     .catch((error) => {
+//         console.log(error)
+//     })
+// })
+
+
 
 
 

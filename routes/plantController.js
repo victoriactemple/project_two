@@ -13,7 +13,30 @@ router.get('/', (req, res) => {
     res.send("You're on the Plant Page Now")
 })
 
-// 
+
+
+// SHOW PAGE
+
+router.get('/:plantId', (req, res) => {
+    const gardenId = req.params.gardenId
+
+    const plantId = req.params.plantId
+
+    GardenModel.findById(gardenId)
+    .then((garden) => {
+        const plant = garden.plants.id(plantId)
+
+        res.render('plants/show', {
+            plant: plant,
+            garden: garden
+        })
+    })
+    .catch((error) => {
+        console.log(error)
+    })
+})
+
+
 
 
 // NEW PLANT 
@@ -86,19 +109,21 @@ router.get('/:plantId/edit', (req, res) => {
 
 })
 
-    // UPDATE Plant Route
-
+// UPDATE Plant Route
 
 router.put('/:plantId', (req, res) => {
 
     // GRAB the plant ID from the paramenters
-    const gardenId = req.params.plantId
+    const gardenId = req.params.gardenId
+
+    const plantId = req.params.plantId
+
     // GRAB the updated plant object from the req body
     const updatedPlant = req.body
-
+    console.log(updatedPlant)
 
     // USE the Garden Model to find the garden by ID
-    Garden.Model.findById(gardenId)
+    GardenModel.findById(gardenId)
     .then((garden) => {
         //THEN Once the garden has been returned, 
         //FIND the snowboard by ID from the garden's plants
@@ -109,10 +134,38 @@ router.put('/:plantId', (req, res) => {
 
         plant.name = updatedPlant.name
         plant.description = updatedPlant.description
-        plant.img = updatedPlant.img
-        plant.price = updated.price
-        plant.edible = updated.edible
-        
+        // plant.img = updatedPlant.img
+        plant.price = updatedPlant.price
+        plant.edible = updatedPlant.edible
+
+        return garden.save()
+    })
+
+    .then(() => {
+        res.redirect(`/gardens/${gardenId}/plants/${plantId}`)
+    })
+    .catch((error) => {
+        console.log(error)
+    })
+
+
+
+    // DELETE
+
+
+    router.get('/:plantId/delete', (req, res) => {
+        const gardenId = req.params.gardenId
+        const plantId = req.params.plantId
+
+        GardenModel.findById(gardenId)
+        .then((company) => {
+            const plant = garden.plants.id(plant).remove()
+
+            return garden.save()
+        })
+        .then(() => {
+            res.redirect(`/gardens/${gardenId}/plants/`)
+        })
     })
 
 
