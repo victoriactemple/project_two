@@ -30,14 +30,29 @@ router.get('/new', (req, res) => {
 })
 
 
-// CREATE a Plant Route
+// CREATE a Garden Route??
 
 router.post('/', (req, res) => {
+    // GRAB the company ID from the parameters
+    const gardenId = req.params.gardenId
+
+    // GRAB the new plant info from the request body
     const newPlant = req.body
 
-    PlantModel.create(newPlant)
-    .then(() => {
-        res.redirect('/gardens')
+    //USE the GardenModel to find the Garden by ID
+    GardenModel.findById(gardenId)
+    .then((garden) => {
+        //THEN once you have found the garden from the database
+        // PUSH the new snowboard object into the Garden's
+        // plant array
+
+        garden.plants.push(newPlant)
+        return garden.save()
+    })
+    .then((garden) => {
+        // THEN once the garden has been saved, 
+        //Redirect to the Plants index for that garden
+        res.redirect(`/gardens/${gardenId}/plants`)
     })
     .catch((error => {
         console.log(error)
@@ -58,7 +73,7 @@ router.get('/:gardenId/edit', (req, res) => {
 })
 
 
-// SHOW A PLANT
+// SHOW A PLANT THIS IS WORKING
 
 router.get('/:plantId', (req, res) => {
     const gardenId = req.params.gardenId

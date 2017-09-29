@@ -41,7 +41,7 @@ const basil = new PlantModel({
 const dill = new PlantModel({
     name: "Dill",
     description: "Technically a weed",
-    img: "https://imgur.com/a/RPmEP",
+    img: "https://i.imgur.com/myD7vT0.jpg",
     price: 3,
     edible: true
 })

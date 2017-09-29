@@ -53,7 +53,7 @@ const plantController = require('./routes/plantController')
 app.use('/gardens/:gardenId/plants', plantController)
 
 const userController = require('./routes/userController')
-app.use('/gardens/user', userController)
+app.use('/gardens/:gardenId/user', userController)
 
 // Pre-coded by Express. I commented these out. 
 // app.use('/', index);
