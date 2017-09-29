@@ -15,6 +15,21 @@ router.get('/', (req, res) => {
 
 
 
+// NEW PLANT 
+
+// gardens/59cda8bc8407b32681aee2f2/plants/new
+
+router.get('/new', (req, res) => {
+    console.log(req.params)
+    const gardenId = req.params.gardenId
+
+    res.render('plants/new', {
+        gardenId: gardenId
+    })
+})
+
+
+
 // SHOW PAGE
 
 router.get('/:plantId', (req, res) => {
@@ -38,19 +53,6 @@ router.get('/:plantId', (req, res) => {
 
 
 
-
-// NEW PLANT 
-
-// gardens/59cda8bc8407b32681aee2f2/plants/new
-
-router.get('/new', (req, res) => {
-    console.log(req.params)
-    const gardenId = req.params.gardenId
-
-    res.render('plants/new', {
-        gardenId: gardenId
-    })
-})
 
 
 // CREATE ROUTE:
@@ -120,7 +122,7 @@ router.put('/:plantId', (req, res) => {
 
     // GRAB the updated plant object from the req body
     const updatedPlant = req.body
-    console.log(updatedPlant)
+    // console.log(updatedPlant)
 
     // USE the Garden Model to find the garden by ID
     GardenModel.findById(gardenId)
@@ -152,22 +154,32 @@ router.put('/:plantId', (req, res) => {
 
     // DELETE
 
-
     router.get('/:plantId/delete', (req, res) => {
-        const gardenId = req.params.gardenId
-        const plantId = req.params.plantId
-
-        GardenModel.findById(gardenId)
-        .then((company) => {
-            const plant = garden.plants.id(plant).remove()
-
-            return garden.save()
+        
+            // GRAB the garden ID from the parameters
+            const gardenId = req.params.gardenId
+            
+            // GRAB the plant ID from the parameters
+            const plantId = req.params.plantsId
+        
+            // USE the gardenModel to find the garden by ID
+            GardenModel.findById(gardenId)
+                .then((garden) => {
+                    // THEN once the garden has been returned,
+                    // REMOVE the plants from the garden's plants array
+                    const plant = garden.plants.id(plantId).remove()
+        
+                    // THEN save the garden and return the PROMISE
+                    return garden.save()
+                    console.log(garden)
+                })
+                .then(() => {
+                    // THEN once the garden has saved, redirect to the 
+                    // garden's plantss INDEX page
+                    res.redirect(`/gardens/${gardenId}/plants`)
+                })
         })
-        .then(() => {
-            res.redirect(`/gardens/${gardenId}/plants/`)
-        })
-    })
-
+        
 
 
 })
