@@ -58,14 +58,20 @@ router.post('/', (req, res) => {
 
 // UPDATE Route
 
-// router.put('/:userId', (req, res) => {
-//   const userId = req.params.userId
+router.put('/:userId', (req, res) => {
+  const userId = req.params.userId
 
-//   const updatedUser = req.body
+  const updatedUser = req.body
 
-//   UserModel.
+  UserModel.findByidAndUpdate(userId, updatedUser, {new: true})
+  .then(() => {
+    res.redirect(`/users/${userId}`)
+  })
+  .catch((error) => {
+    console.log(error)
+  })
 
-// })
+})
 
 
 // SHOW route 

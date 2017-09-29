@@ -122,7 +122,7 @@ const roger = new UserModel({
 })
 
 
-// const users = [erica, alex, roger]
+const users = [erica, alex, roger]
 const gardens =[gardenPath]
 const plants = [basil, dill, thyme, chives, arugala, mint, rosemary, sage, bayleaf]
 
