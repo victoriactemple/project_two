@@ -160,7 +160,7 @@ router.put('/:plantId', (req, res) => {
             const gardenId = req.params.gardenId
             
             // GRAB the plant ID from the parameters
-            const plantId = req.params.plantsId
+            const plantId = req.params.plantId
         
             // USE the gardenModel to find the garden by ID
             GardenModel.findById(gardenId)
@@ -171,12 +171,12 @@ router.put('/:plantId', (req, res) => {
         
                     // THEN save the garden and return the PROMISE
                     return garden.save()
-                    console.log(garden)
+                    console.log(plantId)
                 })
                 .then(() => {
                     // THEN once the garden has saved, redirect to the 
                     // garden's plantss INDEX page
-                    res.redirect(`/gardens/${gardenId}/plants`)
+                    res.redirect(`/gardens`)
                 })
         })
         
