@@ -27,34 +27,62 @@ router.get('/', (req, res) => {
 // NEW USER
 
 router.get('/new', (req, res) => {
-  const userId = req.params.userId
 
+  //RENDER an empty from for the new user
   res.render('users/new', {
-    userId: userId
+
   })
 })
-
-// SHOW PAGE
-
-
 
 
 
 // CREATE User Route
 
 router.post('/', (req, res) => {
-const userId = req.params.userId
-const newUser = req.body
+  // GRAB the new user info as a JS object from the req bosy
+  const newUser = req.body
 
-UserModel.findById(userId)
-.then(() => {
-  user.users.psuh(newUser)
+  UserModel.create(newUser)
+    .then(() => {
 
-  return user.save()
+      //THEN once the model has been saved, redirect to the USERS index
+      res.redirect('/users')
+    })
+    .catch((error) => {
+      console.log(error)
+    })
 
 })
 
-})
+
+
+// UPDATE Route
+
+// router.put('/:userId', (req, res) => {
+//   const userId = req.params.userId
+
+//   const updatedUser = req.body
+
+//   UserModel.
+
+// })
+
+
+// SHOW route 
+
+router.get('/:userId', (req, res) => {
+    const userId = req.params.userId
+    
+    UserModel.findById(userId)
+    .then((users) => {
+      res.render('users/show', {
+        users: users
+      })
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+}) 
 
 
 
