@@ -9,9 +9,14 @@
 
 {{#each garden.plants}}
 <div>
-    {{this.name}}
+
+        <a href="/gardens/{{../garden._id}}/plants/{{this._id}}">{{this.name}}</a>
+
+    {{!-- {{this.name}} --}}
     
-    <a href="/gardens/{{../garden._id}}/plants/{{this._id}}"><img src="{{this.img}}"></a>
+    <a href="/gardens/{{../garden._id}}/plants/{{this._id}}"><img class="plant-image" src="{{this.img}}"></a>
+
+
 
     {{!-- {{this.description}}
     {{this.price}}
