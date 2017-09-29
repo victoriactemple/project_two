@@ -33,7 +33,7 @@ const gardenPath = new GardenModel({name: "Victoria's Garden", country: "USA"})
 const basil = new PlantModel({
     name: "Basil",
     description: "Cousin of catnip, basil grows well by tomatoes and is an excellent topping on everything from pasta to stirfry",
-    img: "https://foodartist.files.wordpress.com/2011/02/herb-basil.jpg",
+    img: "https://i.imgur.com/02ouBiR.jpg",
     price: 3,
     edible: true
 })
@@ -41,23 +41,32 @@ const basil = new PlantModel({
 const dill = new PlantModel({
     name: "Dill",
     description: "Technically a weed",
-    img: "https://foodartist.files.wordpress.com/2011/02/herb-basil.jpg",
+    img: "https://imgur.com/a/RPmEP",
     price: 3,
     edible: true
 })
+
+const thyme = new PlantModel({
+    name: "Thyme",
+    description: "Aromatic perennial evergreen herb with culinary, medicinal, and ornamental uses",
+    img: "https://i.imgur.com/EyFQz7O.jpg",
+    price: 3,
+    edible: true
+})
+
 
 const chives = new PlantModel({
     name: "Chive",
     description: "Excellent on a baked potato if that's your thing",
-    img: "http://www.sallypond.co.uk/wp-content/uploads/2016/05/chives-watermarked.jpg",
+    img: "https://i.imgur.com/cFf92PA.jpg",
     price: 3,
     edible: true
 })
 
-const catnip = new PlantModel({
-    name: "Catnip",
-    description: "Your cats will love this herbal treat",
-    img: "http://pfaf.org/Admin/PlantImages/NepetaCataria.jpg",
+const arugala = new PlantModel({
+    name: "Arugala",
+    description: "My favorite green when paired with beets and goat cheese",
+    img: "https://i.imgur.com/sGfITDj.jpg",
     price: 3,
     edible: true
 })
@@ -65,18 +74,38 @@ const catnip = new PlantModel({
 const mint = new PlantModel({
     name: "Mint",
     description: "A multitude of varieties -- peppermint, spearmint, chocolate-mint even",
-    img: "http://2.bp.blogspot.com/-ptorspDmdFI/UQWEomK6mEI/AAAAAAAAAFg/o69e4z09cvg/s1600/peppermint.png",
+    img: "https://i.imgur.com/cJHiqhY.jpg",
     price: 3,
     edible: true
 })
 
-const giantHogWeed = new PlantModel({
-    name: "Giant Hog Weed",
-    description: "Don't even touch it -- super poisonous and will end in a rash once touched and skin is exposed to sunlight",
-    img: "https://foodartist.files.wordpress.com/2011/02/herb-basil.jpg",
+const rosemary = new PlantModel({
+    name: "Rosemary",
+    description: "Smashing when cooked with potatoes and often used both in the herb garden and for landscaping",
+    img: "https://i.imgur.com/XT9l4FL.jpg",
     price: 1,
-    edible: false
+    edible: true
 })
+
+
+
+const sage = new PlantModel({
+    name: "Sage",
+    description: "Thick herb that shouldn't be eaten on it's own unless it's been cooked in butter",
+    img: "https://i.imgur.com/sIrdVv0.jpg",
+    price: 3,
+    edible: true
+})
+
+
+const bayleaf = new PlantModel({
+    name: "Bay Leaf",
+    description: "Much like sage, bay leaves are create for cooking, but shouldn't be eated raw",
+    img: "https://i.imgur.com/H2kpJbc.jpg",
+    price: 3,
+    edible: true
+})
+
 
 
 // Create some users
@@ -95,7 +124,7 @@ const roger = new UserModel({
 
 const users = [erica, alex, roger]
 const gardens =[gardenPath]
-const plants = [basil, dill, chives, catnip, mint, giantHogWeed]
+const plants = [basil, dill, thyme, chives, arugala, mint, rosemary, sage, bayleaf]
 
 
 gardens.forEach(garden => {
