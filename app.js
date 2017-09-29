@@ -6,12 +6,13 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+const methodOverride = require('method-override')
 
 // var index = require('./routes/index');
 // var users = require('./routes/users');
 
 var app = express();
-
+app.use(methodOverride('_method'))
 
 //Database Set-up
 var mongoose = require('mongoose');
@@ -46,14 +47,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 const indexController = require('./routes/indexController')
 app.use('/', indexController)
 
-const gardenController = require('./routes/gardenController')
-app.use('/gardens', gardenController)
-
 const plantController = require('./routes/plantController')
 app.use('/gardens/:gardenId/plants', plantController)
 
 const userController = require('./routes/userController')
 app.use('/gardens/:gardenId/user', userController)
+
+const gardenController = require('./routes/gardenController')
+app.use('/gardens', gardenController)
+
 
 // Pre-coded by Express. I commented these out. 
 // app.use('/', index);
