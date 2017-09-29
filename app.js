@@ -51,7 +51,7 @@ const plantController = require('./routes/plantController')
 app.use('/gardens/:gardenId/plants', plantController)
 
 const userController = require('./routes/userController')
-app.use('/user', userController)
+app.use('/users', userController)
 
 const gardenController = require('./routes/gardenController')
 app.use('/gardens', gardenController)

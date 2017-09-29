@@ -8,7 +8,9 @@ const UserModel = Schema.UserModel
 /* GET users listing. */
 
 //INDEX
-router.get("/", (req, res) => {
+router.get('/', (req, res) => {
+
+  // res.send("You're hit the user's index")
   //find all users in database 
   UserModel.find({})
     .then((users) => {
@@ -24,13 +26,37 @@ router.get("/", (req, res) => {
 
 // NEW USER
 
-// router.get('/new', (req, res) => {
-//   const userId = req.params.userId
+router.get('/new', (req, res) => {
+  const userId = req.params.userId
 
-//   res.render('users/new', {
-//     userId: userId
-//   })
-// })
+  res.render('users/new', {
+    userId: userId
+  })
+})
+
+// SHOW PAGE
+
+
+
+
+
+// CREATE User Route
+
+router.post('/', (req, res) => {
+const userId = req.params.userId
+const newUser = req.body
+
+UserModel.findById(userId)
+.then(() => {
+  user.users.psuh(newUser)
+
+  return user.save()
+
+})
+
+})
+
+
 
 
 module.exports = router;

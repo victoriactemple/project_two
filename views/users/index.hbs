@@ -1,10 +1,13 @@
 <div>
 
-    <h1>Welcome Users</h1>
+    <h1 class="welcome-users">Welcome Users</h1>
 
-    {{#each users}}
+    <a href="/users/new">Create a user profile</a>
 
-    {{this.name}}
+
+{{#each user}}
+
+ {{this.name}}
 
 {{/each}}
 
