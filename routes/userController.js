@@ -1,14 +1,25 @@
 var express = require('express');
-var router = express.Router();
+var router = express.Router({ mergeParams: true });
 
-// const Schema = require("..db/schema.js")
-// const UserModel = Schema.UserModel
+const Schema = require("../db/schema.js")
+const UserModel = Schema.UserModel
 
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+
+//INDEX
+router.get("/", (req, res) => {
+  //find all users in database 
+  UserModel.find({})
+    .then((users) => {
+      res.render("users/index", {
+        users: users
+      })
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+})
 
 
 // NEW USER
