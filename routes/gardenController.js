@@ -30,6 +30,32 @@ router.get('/new', (req, res) => {
 })
 
 
+// CREATE a Plant Route
+
+router.post('/', (req, res) => {
+    const newPlant = req.body
+
+    PlantModel.create(newPlant)
+    .then(() => {
+        res.redirect('/gardens')
+    })
+    .catch((error => {
+        console.log(error)
+    }))
+})
+
+
+// EDIT Route 
+
+router.get('/:gardenId/edit', (req, res) => {
+
+    const gardenId = req.params.gardenId
+
+    GardenModel.findById(gardenId)
+    .then((company) => {
+        res.render('gardens/edit')
+    })
+})
 
 
 // SHOW A PLANT
@@ -52,6 +78,10 @@ router.get('/:plantId', (req, res) => {
         console.log(error)
     })
 })
+
+
+
+
 
 
 

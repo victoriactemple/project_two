@@ -20,6 +20,7 @@ const Schema = require("./schema.js")
 
 const GardenModel = Schema.GardenModel
 const PlantModel = Schema.PlantModel
+const UserModel = Schema.UserModel
 
 GardenModel.remove({}, function (err) {
     console.log(err);
@@ -77,6 +78,22 @@ const giantHogWeed = new PlantModel({
     edible: false
 })
 
+
+// Create some users
+const erica = new UserModel({
+    name: "Erica"
+})
+
+const alex = new UserModel({
+    name: "Alex"
+})
+
+const roger = new UserModel({
+    name: "Roger"
+})
+
+
+const users = [erica, alex, roger]
 const gardens =[gardenPath]
 const plants = [basil, dill, chives, catnip, mint, giantHogWeed]
 

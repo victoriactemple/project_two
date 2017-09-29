@@ -33,13 +33,17 @@ const GardenSchema = new Schema ({
 
 })
 
+const UserSchema = new Schema({
+    name: String,
+})
+
 const GardenModel = mongoose.model('Garden', GardenSchema)
 const PlantModel = mongoose.model('Plant', PlantSchema)
-// const UserModel = mongoose.model('User', UserSchema)
+const UserModel = mongoose.model('User', UserSchema)
 
 module.exports = {
     GardenModel: GardenModel,
     PlantModel: PlantModel,
-    // UserModel: UserModel
+    UserModel: UserModel
 
 }
