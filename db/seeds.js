@@ -112,6 +112,32 @@ const bayleaf = new PlantModel({
     edible: true
 })
 
+const taragon = new PlantModel({
+    name: "Taragon",
+    description: "Goes great in a mushroom omelette",
+    img: "https://i.imgur.com/sIrdVv0.jpg",
+    price: 2,
+    edible: true
+})
+
+const parsley = new PlantModel({
+    name: "Parsley",
+    description: "Used most often as a garnish, parsley is mild and earthy in flavor and is the star of tabouli salad",
+    img: "../images/parlsey.jpg",
+    price: 2,
+    edible: true
+})
+
+const margoram = new PlantModel({
+    name: "Marjoram",
+    description: "Marjoram has a sweet pine and citrus flavor.",
+    img: "..images/marjoram.jpg",
+    price: 2,
+    edible: true
+})
+
+
+
 
 
 // Create some users

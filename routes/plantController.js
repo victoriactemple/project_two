@@ -144,11 +144,13 @@ router.put('/:plantId', (req, res) => {
     })
 
     .then(() => {
-        res.redirect(`/gardens/${gardenId}/plants/${plantId}`)
+        res.redirect(`/gardens/${gardenId}/plants/${plantId}`)    
     })
     .catch((error) => {
         console.log(error)
     })
+
+})
 
 
 
@@ -176,13 +178,13 @@ router.put('/:plantId', (req, res) => {
                 .then(() => {
                     // THEN once the garden has saved, redirect to the 
                     // garden's plantss INDEX page
-                    res.redirect(`/gardens`)
+                    res.redirect(`/gardens/`)
                 })
         })
         
 
 
-})
+
 
 
 module.exports = router
