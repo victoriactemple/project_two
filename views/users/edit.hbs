@@ -1,0 +1,13 @@
+<h2>Edit {{users.name}}'s Profile</h2>
+
+<a href="/">Return to main page</a>
+
+
+<form action ="/users/{{users._id}}?_method=PUT" method="POST">
+
+<label for="name">Name</label>
+<input type="text" name="name" value="{{user.name}}">
+
+<button type="submit" value="Edit">Update</button>
+
+</form>

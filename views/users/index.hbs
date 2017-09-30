@@ -4,11 +4,14 @@
 
     <a href="/users/new">Create a user profile</a>
 
-
+<div class="user-div">
+<ul>
 {{#each users}}
 
- {{this.name}}
+ <li class ="user-in-list"><a href="/users/{{this._id}}">{{this.name}}</a></li>
 
 {{/each}}
+</ul>
+</div>
 
 </div>

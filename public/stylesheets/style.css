@@ -6,3 +6,8 @@ body {
 a {
   color: #00B7FF;
 }
+
+.user-in-list{
+  list-style-type: none;
+}
+

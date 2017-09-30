@@ -25,6 +25,12 @@ const UserModel = Schema.UserModel
 GardenModel.remove({}, function (err) {
     console.log(err);
 });
+
+UserModel.remove({}, function (err) {
+    console.log(err);
+});
+
+
 //Create a Garden
 const gardenPath = new GardenModel({name: "Victoria's Garden", country: "USA"})
 

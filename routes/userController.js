@@ -55,6 +55,23 @@ router.post('/', (req, res) => {
 })
 
 
+//EDIT User
+
+router.get('/:userId/edit', (req, res) => {
+  const userId = req.params.userId
+
+  UserModel.findById(userId)
+  .then((users) => {
+    res.render('users/edit', {
+      users: users
+    })
+  })
+  .catch((error) => {
+    console.log(error)
+  })
+
+})
+
 
 // UPDATE Route
 
@@ -63,7 +80,7 @@ router.put('/:userId', (req, res) => {
 
   const updatedUser = req.body
 
-  UserModel.findByidAndUpdate(userId, updatedUser, {new: true})
+  UserModel.findByIdAndUpdate(userId, updatedUser, {new: true})
   .then(() => {
     res.redirect(`/users/${userId}`)
   })
@@ -90,7 +107,19 @@ router.get('/:userId', (req, res) => {
     })
 }) 
 
+// DELETE User Route
 
+router.get('/:userId/delete', (req, res) => {
+  const userId = req.params.userId
+
+  UserModel.findByIdAndRemove(userId)
+  .then(() => {
+    res.redirect('/users')
+  })
+  .catch((error) => {
+    console.log(error)
+  })
+})
 
 
 module.exports = router;
