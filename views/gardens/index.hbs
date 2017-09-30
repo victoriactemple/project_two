@@ -1,16 +1,16 @@
 <div>
 
-    <h1>The Garden Path</h1>
+    <h1>Up The Garden Path</h1>
 
-    <h3>Some Plants</h3>
+    
 <div>
-<a href = "/gardens/{{garden._id}}/plants/new">Add a new Plant</a>
+<a href = "/gardens/{{garden._id}}/plants/new" class="button">Add a new Plant</a>
 </div>
 
 {{#each garden.plants}}
 <div>
-
-        <a href="/gardens/{{../garden._id}}/plants/{{this._id}}">{{this.name}}</a>
+{{!-- 
+        <a href="/gardens/{{../garden._id}}/plants/{{this._id}}">{{this.name}}</a> --}}
 
     {{!-- {{this.name}} --}}
     
