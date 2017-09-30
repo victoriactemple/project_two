@@ -39,7 +39,7 @@ const gardenPath = new GardenModel({name: "Victoria's Garden", country: "USA"})
 const basil = new PlantModel({
     name: "Basil",
     description: "Cousin of catnip, basil grows well by tomatoes and is an excellent topping on everything from pasta to stirfry",
-    img: "https://i.imgur.com/02ouBiR.jpg",
+    img: "/images/basil.jpg",
     price: 3,
     edible: true
 })
@@ -47,7 +47,7 @@ const basil = new PlantModel({
 const dill = new PlantModel({
     name: "Dill",
     description: "Technically a weed",
-    img: "https://i.imgur.com/myD7vT0.jpg",
+    img: "/images/dill.jpg",
     price: 3,
     edible: true
 })
@@ -55,7 +55,7 @@ const dill = new PlantModel({
 const thyme = new PlantModel({
     name: "Thyme",
     description: "Aromatic perennial evergreen herb with culinary, medicinal, and ornamental uses",
-    img: "https://i.imgur.com/EyFQz7O.jpg",
+    img: "/images/thyme.jpg",
     price: 3,
     edible: true
 })
@@ -64,7 +64,7 @@ const thyme = new PlantModel({
 const chives = new PlantModel({
     name: "Chive",
     description: "Excellent on a baked potato if that's your thing",
-    img: "https://i.imgur.com/cFf92PA.jpg",
+    img: "/images/chives.jpg",
     price: 3,
     edible: true
 })
@@ -72,7 +72,7 @@ const chives = new PlantModel({
 const arugala = new PlantModel({
     name: "Arugala",
     description: "My favorite green when paired with beets and goat cheese",
-    img: "https://i.imgur.com/sGfITDj.jpg",
+    img: "/images/arugala.jpg",
     price: 3,
     edible: true
 })
@@ -80,7 +80,7 @@ const arugala = new PlantModel({
 const mint = new PlantModel({
     name: "Mint",
     description: "A multitude of varieties -- peppermint, spearmint, chocolate-mint even",
-    img: "https://i.imgur.com/cJHiqhY.jpg",
+    img: "/images/mint.jpg",
     price: 3,
     edible: true
 })
@@ -88,7 +88,7 @@ const mint = new PlantModel({
 const rosemary = new PlantModel({
     name: "Rosemary",
     description: "Smashing when cooked with potatoes and often used both in the herb garden and for landscaping",
-    img: "https://i.imgur.com/XT9l4FL.jpg",
+    img: "/images/rosemary.jpg",
     price: 1,
     edible: true
 })
@@ -98,7 +98,7 @@ const rosemary = new PlantModel({
 const sage = new PlantModel({
     name: "Sage",
     description: "Thick herb that shouldn't be eaten on it's own unless it's been cooked in butter",
-    img: "https://i.imgur.com/sIrdVv0.jpg",
+    img: "/images/sage.jpg",
     price: 3,
     edible: true
 })
@@ -107,7 +107,7 @@ const sage = new PlantModel({
 const bayleaf = new PlantModel({
     name: "Bay Leaf",
     description: "Much like sage, bay leaves are create for cooking, but shouldn't be eated raw",
-    img: "https://i.imgur.com/H2kpJbc.jpg",
+    img: "/images/bayleaf.jpg",
     price: 3,
     edible: true
 })
@@ -115,7 +115,7 @@ const bayleaf = new PlantModel({
 const taragon = new PlantModel({
     name: "Taragon",
     description: "Goes great in a mushroom omelette",
-    img: "https://i.imgur.com/sIrdVv0.jpg",
+    img: "/images/taragon.jpg",
     price: 2,
     edible: true
 })
@@ -123,21 +123,26 @@ const taragon = new PlantModel({
 const parsley = new PlantModel({
     name: "Parsley",
     description: "Used most often as a garnish, parsley is mild and earthy in flavor and is the star of tabouli salad",
-    img: "../images/parlsey.jpg",
+    img: "/images/parsley.jpg",
     price: 2,
     edible: true
 })
 
-const margoram = new PlantModel({
+const marjoram = new PlantModel({
     name: "Marjoram",
     description: "Marjoram has a sweet pine and citrus flavor.",
-    img: "..images/marjoram.jpg",
+    img: "/images/marjoram.jpg",
     price: 2,
     edible: true
 })
 
-
-
+const chervil = new PlantModel({
+    name: "Chervil",
+    description: "Cervil..don't know. Looks like it would hur going down.",
+    img: "/images/genericplant_chervil.jpg",
+    price: 2,
+    edible: true
+})
 
 
 // Create some users
@@ -156,7 +161,7 @@ const roger = new UserModel({
 
 const users = [erica, alex, roger]
 const gardens =[gardenPath]
-const plants = [basil, dill, thyme, chives, arugala, mint, rosemary, sage, bayleaf]
+const plants = [basil, dill, thyme, chives, arugala, mint, rosemary, sage, bayleaf, taragon, parsley, marjoram, chervil]
 
 
 // Saving the users

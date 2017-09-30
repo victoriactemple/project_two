@@ -1,7 +1,7 @@
-<h1>{{plant.name}}'s Show Page</h1>
+<h1>{{plant.name}}'s Profile</h1>
 
 <div>
-    <img src="{{plant.img}}">
+    <img class="responsive-img" src="{{plant.img}}">
 <div>
 
 {{plant.description}}
@@ -10,7 +10,7 @@
 
 
 <div>
-    <a href="/gardens/{{garden._id}}/plants/{{plant._id}}/edit">Edit Plant</a>
+    <a href="/gardens/{{garden._id}}/plants/{{plant._id}}/edit" class="waves-teal btn-flat">Edit Plant</a>
 </div>
 <div>
     <a href="/gardens/{{garden._id}}/plants/{{plant._id}}/delete">Delete Plant</a>    

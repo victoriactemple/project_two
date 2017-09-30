@@ -7,14 +7,18 @@
 <a href = "/gardens/{{garden._id}}/plants/new" class="button">Add a new Plant</a>
 </div>
 
+<div>
+<a href = "/" class="button">Return to Home</a>
+</div>
+
 {{#each garden.plants}}
 <div>
 
-        <a href="/gardens/{{../garden._id}}/plants/{{this._id}}">{{this.name}}</a>
+        {{!-- <a href="/gardens/{{../garden._id}}/plants/{{this._id}}">{{this.name}}</a> --}}
 
     {{!-- {{this.name}} --}}
     
-    <a href="/gardens/{{../garden._id}}/plants/{{this._id}}"><img class="plant-image" src="{{this.img}}"></a>
+    <a href="/gardens/{{../garden._id}}/plants/{{this._id}}"><img class="responsive-img" src="{{this.img}}"></a>
 
 
 
