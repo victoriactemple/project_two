@@ -136,13 +136,13 @@ const marjoram = new PlantModel({
     edible: true
 })
 
-const chervil = new PlantModel({
-    name: "Chervil",
-    description: "Cervil..don't know. Looks like it would hur going down.",
-    img: "/images/genericplant_chervil.jpg",
-    price: 2,
-    edible: true
-})
+// const chervil = new PlantModel({
+//     name: "Chervil",
+//     description: "Cervil..don't know. Looks like it would hur going down.",
+//     img: "/images/genericplant_chervil.jpg",
+//     price: 2,
+//     edible: true
+// })
 
 
 // Create some users
@@ -161,7 +161,7 @@ const roger = new UserModel({
 
 const users = [erica, alex, roger]
 const gardens =[gardenPath]
-const plants = [basil, dill, thyme, chives, arugala, mint, rosemary, sage, bayleaf, taragon, parsley, marjoram, chervil]
+const plants = [basil, dill, thyme, chives, arugala, mint, rosemary, sage, bayleaf, taragon, parsley, marjoram]
 
 
 // Saving the users

@@ -11,3 +11,27 @@ a {
   list-style-type: none;
 }
 
+/* .responsive-img{
+  width: 305;
+  height: 229;
+} */
+
+div{
+  display: block;
+}
+
+
+/* body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+} */
+    
+
+.page-footer{
+  background-color: rgba(245, 222, 179, 0.56);
+}

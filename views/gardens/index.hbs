@@ -1,32 +1,29 @@
-<div>
 
-    <h1>Up The Garden Path</h1>
+<div class="container">
 
-    
-<div>
+
+ <h1>Up The Garden Path</h1>
+
 <a href = "/gardens/{{garden._id}}/plants/new" class="button">Add a new Plant</a>
-</div>
 
-<div>
 <a href = "/" class="button">Return to Home</a>
-</div>
+
+<div class="section">
+
+<div class="row">
 
 {{#each garden.plants}}
-<div>
 
-        {{!-- <a href="/gardens/{{../garden._id}}/plants/{{this._id}}">{{this.name}}</a> --}}
-
-    {{!-- {{this.name}} --}}
-    
+ 
+  <div class="col s12"> 
     <a href="/gardens/{{../garden._id}}/plants/{{this._id}}"><img class="responsive-img" src="{{this.img}}"></a>
+  </div>  
 
 
-
-    {{!-- {{this.description}}
-    {{this.price}}
-   {{this.edible}} --}}
-
-</div>
+</div> {{!--row--}}
 {{/each}}
 
-</div>
+</div> {{!--section--}}
+
+
+</div>  {{!--container --}}

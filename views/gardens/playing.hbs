@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="section">
+        <div class="row">
+            <div class="col s12">
+                <div class="section">
+                        <div class="col s12">
+                            <span class="title"> Recenlty Added Plants</span>
+                        </div>
+                        <div class="col s12 m6 12">
+                            <div class="card">
+                                <div class="card-image waves-effect waves-block waves-light">
+                                        <a href="/gardens/{{../garden._id}}/plants/{{this._id}}"><img class="responsive-img" src="{{this.img}}">
+                                        <span class="card-title home">NewPlant</span></a>
+
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+{{!--
+<div class="container">
+
+
+ <h1>Up The Garden Path</h1>
+
+<a href = "/gardens/{{garden._id}}/plants/new" class="button">Add a new Plant</a>
+
+<a href = "/" class="button">Return to Home</a>
+
+<div class="section">
+
+<div class="row">
+
+{{#each garden.plants}}
+
+
+        {{!-- <a href="/gardens/{{../garden._id}}/plants/{{this._id}}">{{this.name}}</a>
+
+    {{!-- {{this.name}} 
+  <div class="col s12"> 
+    <a href="/gardens/{{../garden._id}}/plants/{{this._id}}"><img class="responsive-img" src="{{this.img}}"></a>
+  </div>  
+
+
+    {{!-- {{this.description}}
+    {{this.price}}
+   {{this.edible}} 
+
+</div> {{!--row--}}
+{{/each}}
+
+</div> {{!--section--}}
+
+
+</div>  {{!--container --}}
