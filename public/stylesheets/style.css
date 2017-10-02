@@ -27,6 +27,17 @@ main {
   background-color: rgba(247, 235, 213, 0.56);
 }
 
-.show-page-card {
-  align-self: left;
+
+@mixin column-count($ct) {
+  -webkit-column-count: $ct;
+  -moz-column-count: $ct;
+  column-count: $ct;
+}
+
+.cards-container {
+  column-break-inside: avoid;
+  .card {
+    display: inline-block;
+    overflow: visible;
+  }
 }
