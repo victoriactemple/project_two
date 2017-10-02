@@ -15,19 +15,27 @@
          <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <nav>
-      <div class="nav-wrapper white">
-        <a href ="/" class="brand-logo black-text">Logo</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="/gardens">Home</a></li>
-             <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-        </ul>
-
-      </div>
-    </nav>
 
 
+   <div class="navbar-fixed">
+     <nav class="white" role="navigation">
+       <div class="container">
+         <div class="nav-wrapper">
+            <div id="logo-container">
+              <a href ="#"></a>
+              <a href ="#" class="brand-logo left black-text">Gardens</a>
+                <div class ="menu-container">
+                  <ul class="right black-text">
+                    <li><a href="/" class="black-text">Main Page</a></li>
+                    <li><a href="/gardens" class="black-text">Herb Garden</a></li>
+                    <li><a href="/users" class="black-text">Users</a></li>
+                  </ul>
+                </div>
+            </div>
+         </div>
+       </div>
+     </nav>
+    </div> 
 
 
     {{{body}}}
@@ -56,3 +64,5 @@
         </footer>  
   </body>
 </html>
+
+

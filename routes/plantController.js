@@ -89,17 +89,12 @@ router.post('/', (req, res) => {
 })
 
 // EDIT ROUTE
-
-
 router.get('/:plantId/edit', (req, res) => {
     const gardenId = req.params.gardenId
-
     const plantId = req.params.plantId
-
     GardenModel.findById(gardenId)
     .then((garden) => {
         const plant = garden.plants.id(plantId)
-
         res.render('plants/edit', {
             plant: plant,
             gardenId: gardenId
@@ -108,48 +103,29 @@ router.get('/:plantId/edit', (req, res) => {
     .catch((error) => {
         console.log(error)
     })
-
 })
-
 // UPDATE Plant Route
 
 router.put('/:plantId', (req, res) => {
-
-    // GRAB the plant ID from the paramenters
     const gardenId = req.params.gardenId
-
     const plantId = req.params.plantId
-
-    // GRAB the updated plant object from the req body
     const updatedPlant = req.body
-    // console.log(updatedPlant)
-
-    // USE the Garden Model to find the garden by ID
     GardenModel.findById(gardenId)
     .then((garden) => {
-        //THEN Once the garden has been returned, 
-        //FIND the snowboard by ID from the garden's plants
         const plant = garden.plants.id(plantId)
-
-        // MAP each attribute from the updated plant object to 
-        //the same attribute on the originl snowboard
-
         plant.name = updatedPlant.name
         plant.description = updatedPlant.description
         // plant.img = updatedPlant.img
         plant.price = updatedPlant.price
         plant.edible = updatedPlant.edible
-
         return garden.save()
     })
-
     .then(() => {
         res.redirect(`/gardens/${gardenId}/plants/${plantId}`)    
     })
     .catch((error) => {
         console.log(error)
     })
-
 })
 
 

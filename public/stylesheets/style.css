@@ -1,37 +1,32 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
 
 a {
   color: #00B7FF;
 }
 
-.user-in-list{
-  list-style-type: none;
+
+
+nav{
+  background-color:(247, 235, 213, 0.56);
 }
 
-/* .responsive-img{
-  width: 305;
-  height: 229;
-} */
-
-div{
-  display: block;
-}
-
-
-/* body {
+ body {
+  background-color: rgb(246, 244, 241);
   display: flex;
   min-height: 100vh;
   flex-direction: column;
 }
 
 main {
+  background-color: rgb(246, 244, 241);
   flex: 1 0 auto;
-} */
+} 
     
 
 .page-footer{
-  background-color: rgba(245, 222, 179, 0.56);
+  /* background-color:#bdb1ad */
+  background-color: rgba(247, 235, 213, 0.56);
+}
+
+.show-page-card {
+  align-self: left;
 }
