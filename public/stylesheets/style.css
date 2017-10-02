@@ -20,10 +20,22 @@ main {
   height: 100px;
 } 
 
-/* .plant-gallery{
+.plant-gallery{
 display: flex;
+flex-direction: row;
 justify-content: flex-start;
+flex-wrap: wrap;
+align-items: center;
+}
 
+/* table{
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+}
+td{
+  width: 5000px;
+ 
 } */
      
 
@@ -46,7 +58,7 @@ justify-content: flex-start;
 
 .parallax-container{
   /* position: relative; */
-  overflow: hidden;
+ overflow: hidden;
   height: 700px;
 }
 

@@ -2,25 +2,24 @@
 
 <a href="/gardens/{{garden._id}}/plants/new" class="button">Add a new Plant</a>
 
-<a href="/" class="button">Return to Home</a> 
+<a href="/" class="button">Return to Home</a>
 
- <div class="row plant-gallery">
-        
-                <div class="col s8">
-                        {{#each garden.plants}}
-                        <div class="col s12 m6 l4">
-                            <div class="card">
-                                <div class="card-image waves-effect waves-block waves-light">
-                                    <a href="/gardens/{{../garden._id}}/plants/{{this._id}}"><img class="responsive-img" src="{{this.img}}"></a>
-                                </div>
-                            </div>
-                        </div>
-                        {{/each}}
-                    
+<div class="row plant-gallery">
+    <div class="col s12">
+        {{#each garden.plants}}
+        <div class="col s12 m6 l4">
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <a href="/gardens/{{../garden._id}}/plants/{{this._id}}"><img class="responsive-img" src="{{this.img}}"></a>
+                </div>
             </div>
         </div>
-        {{!--
+        {{/each}}
+
     </div>
+</div>
+{{!--
+</div>
 </div> --}} {{!--
 <div class="container">
 
