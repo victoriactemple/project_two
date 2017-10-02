@@ -32,7 +32,7 @@ UserModel.remove({}, function (err) {
 
 
 //Create a Garden
-const gardenPath = new GardenModel({name: "Victoria's Garden", country: "USA"})
+const gardenPath = new GardenModel({ name: "Victoria's Garden", country: "USA" })
 
 // Create some Plants
 
@@ -41,7 +41,7 @@ const basil = new PlantModel({
     description: "Cousin of catnip, basil grows well by tomatoes and is an excellent topping on everything from pasta to stirfry",
     img: "/images/basil.jpg",
     price: 3,
-    edible: true
+    qty: 2
 })
 
 const dill = new PlantModel({
@@ -49,7 +49,7 @@ const dill = new PlantModel({
     description: "Technically a weed",
     img: "/images/dill.jpg",
     price: 3,
-    edible: true
+    qty: 2
 })
 
 const thyme = new PlantModel({
@@ -57,7 +57,7 @@ const thyme = new PlantModel({
     description: "Aromatic perennial evergreen herb with culinary, medicinal, and ornamental uses",
     img: "/images/thyme.jpg",
     price: 3,
-    edible: true
+    qty: 3
 })
 
 
@@ -66,7 +66,7 @@ const chives = new PlantModel({
     description: "Excellent on a baked potato if that's your thing",
     img: "/images/chives.jpg",
     price: 3,
-    edible: true
+    qty: 2
 })
 
 const arugala = new PlantModel({
@@ -74,7 +74,7 @@ const arugala = new PlantModel({
     description: "My favorite green when paired with beets and goat cheese",
     img: "/images/arugala.jpg",
     price: 3,
-    edible: true
+    qty: 10
 })
 
 const mint = new PlantModel({
@@ -82,7 +82,7 @@ const mint = new PlantModel({
     description: "A multitude of varieties -- peppermint, spearmint, chocolate-mint even",
     img: "/images/mint.jpg",
     price: 3,
-    edible: true
+    qty: 3
 })
 
 const rosemary = new PlantModel({
@@ -90,7 +90,7 @@ const rosemary = new PlantModel({
     description: "Smashing when cooked with potatoes and often used both in the herb garden and for landscaping",
     img: "/images/rosemary.jpg",
     price: 1,
-    edible: true
+    qty: 1
 })
 
 
@@ -100,7 +100,7 @@ const sage = new PlantModel({
     description: "Thick herb that shouldn't be eaten on it's own unless it's been cooked in butter",
     img: "/images/sage.jpg",
     price: 3,
-    edible: true
+    qty: 1
 })
 
 
@@ -109,7 +109,7 @@ const bayleaf = new PlantModel({
     description: "Much like sage, bay leaves are create for cooking, but shouldn't be eated raw",
     img: "/images/bayleaf.jpg",
     price: 3,
-    edible: true
+    qty: 2
 })
 
 const taragon = new PlantModel({
@@ -117,7 +117,7 @@ const taragon = new PlantModel({
     description: "Goes great in a mushroom omelette",
     img: "/images/taragon.jpg",
     price: 2,
-    edible: true
+    qty: 1
 })
 
 const parsley = new PlantModel({
@@ -125,24 +125,17 @@ const parsley = new PlantModel({
     description: "Used most often as a garnish, parsley is mild and earthy in flavor and is the star of tabouli salad",
     img: "/images/parsley.jpg",
     price: 2,
-    edible: true
+    qty: 1
 })
 
 const marjoram = new PlantModel({
     name: "Marjoram",
     description: "Marjoram has a sweet pine and citrus flavor.",
-    img: "/images/marjoram.jpg",
+    img: "/images/marjarom.jpg",
     price: 2,
-    edible: true
+    qty: 1
 })
 
-// const chervil = new PlantModel({
-//     name: "Chervil",
-//     description: "Cervil..don't know. Looks like it would hur going down.",
-//     img: "/images/genericplant_chervil.jpg",
-//     price: 2,
-//     edible: true
-// })
 
 
 // Create some users
@@ -160,7 +153,7 @@ const roger = new UserModel({
 
 
 const users = [erica, alex, roger]
-const gardens =[gardenPath]
+const gardens = [gardenPath]
 const plants = [basil, dill, thyme, mint, sage, bayleaf, taragon, marjoram, chives, arugala, rosemary, parsley]
 
 
@@ -175,13 +168,13 @@ roger.save()
 gardens.forEach(garden => {
     garden.plants = plants
 
-garden.save()
-.then((garden) =>{
-    console.log(`${garden.name} saved`)
-})
-.catch((error) =>{
-    console.log(error)
-})
+    garden.save()
+        .then((garden) => {
+            console.log(`${garden.name} saved`)
+        })
+        .catch((error) => {
+            console.log(error)
+        })
 
 })
 

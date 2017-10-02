@@ -117,7 +117,7 @@ router.put('/:plantId', (req, res) => {
         plant.description = updatedPlant.description
         // plant.img = updatedPlant.img
         plant.price = updatedPlant.price
-        plant.edible = updatedPlant.edible
+        plant.qty = updatedPlant.qty
         return garden.save()
     })
     .then(() => {

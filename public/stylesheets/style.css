@@ -18,17 +18,26 @@ nav{
 main {
   background-color: rgb(246, 244, 241);
   flex: 1 0 auto;
-  height: 100px;
+  padding: 0, auto;
 } 
 
-.plant-gallery{
-height: 600px;
+.plant-show{
+  text-align: center;
+}
+
+.btn{
+ color: white
+}
+
+/* .plant-gallery{
 display: flex;
 flex-direction: row;
-justify-content: flex-start;
-flex-wrap: wrap;
+flex-wrap: row wrap;
+justify-content: center;
 align-items: center;
-}
+align-content: center;
+height: 600px;
+} */
 
 
 
@@ -42,31 +51,29 @@ td{
  
 } */
      
+form{
+  padding: 50px;
 
- #plant-form-id{
-  padding: 50px
 }
 
-.plant-from{
-  height: 1000px;
-} 
 
 .page-footer{
+  text-align: center;
   background-color: rgba(247, 235, 213, 0.56);
 }
 
 
-.parallax-container{
+/* .parallax-container{
  position: relative; 
- /* overflow: hidden; */
+ overflow: hidden;
 
-}
+} */
 
-.parallax img{
-  /* width: auto;
-  height: 100%; */
+/* .parallax img{
+  width: auto;
+  height: 100%;
   display: inherit !important;
-}
+} */
 /* .parallax-mirror,#vurtUnderlay{
   height:auto!important;
   width:100%!important;
