@@ -3,6 +3,7 @@ a {
   color: #00B7FF;
 }
 
+
 nav{
   background-color:(247, 235, 213, 0.56);
 }
@@ -21,12 +22,15 @@ main {
 } 
 
 .plant-gallery{
+height: 600px;
 display: flex;
 flex-direction: row;
 justify-content: flex-start;
 flex-wrap: wrap;
 align-items: center;
 }
+
+
 
 /* table{
   display: flex;
@@ -52,19 +56,15 @@ td{
 }
 
 
-
-
-
-
 .parallax-container{
-  /* position: relative; */
- overflow: hidden;
-  height: 700px;
+ position: relative; 
+ /* overflow: hidden; */
+
 }
 
 .parallax img{
-  width: auto;
-  height: 100%;
+  /* width: auto;
+  height: 100%; */
   display: inherit !important;
 }
 /* .parallax-mirror,#vurtUnderlay{
