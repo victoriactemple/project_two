@@ -11,18 +11,27 @@
         <img width="350" height="350" class="responsive-img" src="{{plant.img}}">
         </div>
 
-            {{plant.description}}
-
-            <h4>Price: $ {{plant.price}} per plant</h4>
-            <h4>Quantity: {{plant.qty}}</h4>
-
+          <span>
+       <a href="/gardens/{{garden._id}}/plants/{{plant._id}}/edit" class="btn btn-small waves-effect orange accent-1">Edit</a>
+        <a href="/gardens/{{garden._id}}/plants/{{plant._id}}/delete" class="btn btn-small waves-effect orange accent-1">Delete</a>
+        </span>
 
             <div>
+            {{plant.description}}
+            </div>
+            <h6>Price: $ {{plant.price}} per plant</h6>
+            <h6>Quantity: {{plant.qty}}</h6>
+
+
+            {{!-- <div>
                 <a href="/gardens/{{garden._id}}/plants/{{plant._id}}/edit" class="btn btn-small waves-effect green lighten-2">Edit Plant</a>
             </div>
             <div>
                 <a href="/gardens/{{garden._id}}/plants/{{plant._id}}/delete" class="btn btn-small waves-effect green lighten-2">Delete Plant</a>
-            </div>
+            </div> --}}
+
+
+      
             <div>
                 <a href="/gardens" class="btn btn-small waves-effect green lighten-2">Return to garden</a>
             </div>

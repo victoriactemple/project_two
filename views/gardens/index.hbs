@@ -1,9 +1,10 @@
 <div> {{!-- containing div--}}
-    <h1>Up The Garden Path</h1>
+    <h1>up the garden path</h1>
 
-<a href="/gardens/{{garden._id}}/plants/new" class="button">Add a new Plant</a>
+<div class="new-plant">
+<a href="/gardens/{{garden._id}}/plants/new" class="btn btn-small waves-effect orange lighten-3">Add a new Plant</a>
+</div>
 
-<a href="/" class="button">Return to Home</a>
 <div class="row">
 {{#each garden.plants}}
 

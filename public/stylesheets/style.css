@@ -1,11 +1,9 @@
 
-a {
-  color: #00B7FF;
-}
-
 
 nav{
-  background-color:(247, 235, 213, 0.56);
+    background-color: rgba(247, 235, 213, 0.56);
+  /* background-color:(247, 235, 213, 0.56); */
+  
 }
 
  body {
@@ -25,41 +23,30 @@ main {
   text-align: center;
 }
 
-.btn{
- color: white
+.user-wrapper{
+  padding: 60px;
+  height: 550px;
 }
 
-/* .plant-gallery{
-display: flex;
-flex-direction: row;
-flex-wrap: row wrap;
-justify-content: center;
-align-items: center;
-align-content: center;
-height: 600px;
-} */
-
-
-
-/* table{
-  display: flex;
-  flex-wrap: wrap;
-  flex-flow: row wrap;
+.new-plant{
+  position: relative;
+  left: 1200px;
 }
-td{
-  width: 5000px;
- 
-} */
+
      
 form{
   padding: 50px;
+}
 
+h2{
+  padding: 30px;
 }
 
 
 .page-footer{
   text-align: center;
   background-color: rgba(247, 235, 213, 0.56);
+  text: #59352A;
 }
 
 
