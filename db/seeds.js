@@ -161,7 +161,7 @@ const roger = new UserModel({
 
 const users = [erica, alex, roger]
 const gardens =[gardenPath]
-const plants = [basil, dill, thyme, chives, arugala, mint, rosemary, sage, bayleaf, taragon, parsley, marjoram]
+const plants = [basil, dill, thyme, mint, sage, bayleaf, taragon, marjoram, chives, arugala, rosemary, parsley]
 
 
 // Saving the users
