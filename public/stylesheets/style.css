@@ -17,31 +17,47 @@ nav{
 main {
   background-color: rgb(246, 244, 241);
   flex: 1 0 auto;
+  height: 10000px;
 } 
     
 
+ #plant-form-id{
+  padding: 50px
+}
+
+.plant-from{
+  height: 1000px;
+} 
+
 .page-footer{
-  /* background-color:#bdb1ad */
   background-color: rgba(247, 235, 213, 0.56);
 }
 
-/* .row-wrap{
-  display: flex;
-  justify-content: space-evenly;
-} */
 
-/* .plant-container{
+
+.plant-container{
+display: flex;
+transform: translate3d(50%, 37px, 0px);
 
 }
- */
+
+
+ 
 
 .parallax-container{
   position: relative;
   overflow: hidden;
-  height: 400px;
+  height: 700px;
 }
 
 .parallax img{
+  width: auto;
+  height: 100%;
   display: inherit !important;
-  
 }
+/* .parallax-mirror,#vurtUnderlay{
+  height:auto!important;
+  width:100%!important;
+  padding:45% 0 0;    
+}
+.parallax-mirror img{width:100%!important;height:100%!important} */
