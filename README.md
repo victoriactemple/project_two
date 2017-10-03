@@ -13,6 +13,7 @@
 * CSS
 * Materialize
 * Photoshop
+* Trello
 
 ##### Functionality:
 This application will allow you to keep track of the plants in your garden -- presently, only your herb garden. A user can jump on and add plants, update their description plants, and manage the cost and quantity. 

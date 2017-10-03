@@ -59,36 +59,21 @@ padding-left: 10px;
 
 
 .page-footer{
-  color: #593824
+  color: #593824;
   text-align: right;
   background-color: rgba(247, 235, 213, 0.56);
 }
 
 
 
+/* // from materialize */
   /* label color */
   /* .input-field label {
     color: #59352A */
 
+    /* // from materialize */
 /* label underline focus color */
 /* .input-field input[type=text]:focus {
   border-bottom: 1px solid #59352A;
   box-shadow: 0 1px 0 0 #59352A; */
 
-/* .parallax-container{
- position: relative; 
- overflow: hidden;
-
-} */
-
-/* .parallax img{
-  width: auto;
-  height: 100%;
-  display: inherit !important;
-} */
-/* .parallax-mirror,#vurtUnderlay{
-  height:auto!important;
-  width:100%!important;
-  padding:45% 0 0;    
-}
-.parallax-mirror img{width:100%!important;height:100%!important} */
