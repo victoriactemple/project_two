@@ -34,7 +34,9 @@ Three models, garden, plants, and users. Plants and Users are fully built out - 
 
 [User Stories](https://trello.com/b/tsZ1NUtB/wdi-project-2 "Trello")
 
-[Portfolio Site] (http://usher-railways-74478.bitballoon.com/)
+[Portfolio Site](http://usher-railways-74478.bitballoon.com/ "Portfolio Site")
+
+[GitHub](https://github.com/victoriactemple/project_two/blob/master/README.md "Victoria Project Github Page")
 
 ### Wireframe & ERD:
 
