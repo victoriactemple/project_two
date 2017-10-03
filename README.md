@@ -22,5 +22,12 @@
 [Deployed on Heroku](https://immense-ravine-33710.herokuapp.com/ "Up the Garden Path")
 [User Stories](https://trello.com/b/tsZ1NUtB/wdi-project-2 "Trello")
 
-Wireframe & ERD:
-![wireframe/ERD] ("/images/garden_screenshot_1.png")
+### Wireframe & ERD:
+
+<img src="wireframe_project2.JPG">
+
+### Site Screenshot
+<img src="/public/images/garden_screenshot_1.png">
+<img src="/public/images/garden_screenshot_2.png">
+<img src="/public/images/garden_screenshot_3.png">
+<img src="/public/images/garden_screenshot_4.png">
