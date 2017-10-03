@@ -42,6 +42,7 @@ main {
      
 form{
   padding: 50px;
+  font-family: "quicksand", sans-serif;
 }
 
 h2{
@@ -58,9 +59,9 @@ padding-left: 10px;
 
 
 .page-footer{
-  text-align: center;
+  color: #593824
+  text-align: right;
   background-color: rgba(247, 235, 213, 0.56);
-  text: #59352A;
 }
 
 
