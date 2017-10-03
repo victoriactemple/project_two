@@ -27,7 +27,7 @@
 
 <img src="/public/images/wireframe_project2.JPG">
 
-### Site Screenshot
+### Site Screenshots
 <img src="/public/images/garden_screenshot_1.png">
 <img src="/public/images/garden_screenshot_2.png">
 <img src="/public/images/garden_screenshot_3.png">
