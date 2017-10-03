@@ -8,6 +8,7 @@
 * NodeJS
 * Express
 * Heroku
+* JavaScript
 * Jquery
 * CSS
 * Materialize
