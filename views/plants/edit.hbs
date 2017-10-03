@@ -1,34 +1,30 @@
 <main class="plant-form">
 
-<h2>{{plant.name}}</h2>
+    <h2>{{plant.name}}</h2>
 
 
-	<div id="plant-form-id" class="plant-class">
+    <div id="plant-form-id" class="plant-class">
 
-	<form action="/gardens/{{gardenId}}/plants/{{plant._id}}?_method=PUT" method="POST">
+        <form action="/gardens/{{gardenId}}/plants/{{plant._id}}?_method=PUT" method="POST">
 
-    <label for="name">name</label>    
-    <input type="text" name="name" value="{{plant.name}}">
+            <label for="name">name</label>
+            <input type="text" name="name" value="{{plant.name}}">
 
-    <label for="description">description</label>
-    <input type="text" name="description" value="{{plant.description}}">
+            <label for="description">description</label>
+            <input type="text" name="description" value="{{plant.description}}"> {{!--
+            <label for="img">image</label>
+            <input type="string" name="image"> --}}
 
-{{!-- 
-	<label for="img">image</label>
-    <input type="string" name="image"> --}}
+            <label for="price">price</label>
+            <input type="number" name="price" value="{{plant.price}}">
 
-	<label for="price">price</label>
-    <input type="number" name="price" value="{{plant.price}}">
-
-    <label for="qty">quantity</label>
-    <input type="number" name="qty" value="{{plant.qty}}">
-
-    {{!-- <label for="edible">edible</label>
-    <input type="boolean" name="edible" value="{{plant.edible}}"> --}}
+            <label for="qty">quantity</label>
+            <input type="number" name="qty" value="{{plant.qty}}"> {{!-- <label for="edible">edible</label>
+            <input type="boolean" name="edible" value="{{plant.edible}}"> --}}
 
 
-    <button type="submit" value="Edit" class="btn btn-small waves-effect green lighten-2">Update</button>
+            <button type="submit" value="Edit" class="btn btn-small waves-effect green lighten-2">Update</button>
 
-</form>
+        </form>
 
 </main>

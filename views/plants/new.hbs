@@ -2,36 +2,30 @@
 
 
 
-	<div id="plant-form-id" class="plant-class">
+<div id="plant-form-id" class="plant-class">
 
-	<form action="/gardens/{{gardenId}}/plants" method="POST">
+    <form action="/gardens/{{gardenId}}/plants" method="POST">
 
-    <label for="name">name</label>    
-    <input type="text" name="name">
-
-    {{!-- <label for="description">description</label>
-    <input type="text" name="description"> --}}
- <label for="description">description</label>
-    <textarea type="text" name="description" class="materialize-textarea"></textarea>
-   
-
-	<label for="price">price</label>
-    <input type="number" name="price">
+        <label for="name">name</label>
+        <input type="text" name="name"> {{!-- <label for="description">description</label>
+        <input type="text" name="description"> --}}
+        <label for="description">description</label>
+        <textarea type="text" name="description" class="materialize-textarea"></textarea>
 
 
-	<label for="qty">quantity</label>
-    <input type="number" name="qty">
-
-    {{!-- <label for="edible">edible</label>
-    <input type="boolean" name="edible"> --}}
-
-        {{!-- Hidden for all devices --}} 
-<div class="hide">
-	<label for="img">image</label>
-    <input type="string" name="img" value="/images/savory.jpg">
-</div>
+        <label for="price">price</label>
+        <input type="number" name="price">
 
 
-    <button type="submit" class ="btn btn-small waves-effect green lighten-2">Create</button>
+        <label for="qty">quantity</label>
+        <input type="number" name="qty"> {{!-- <label for="edible">edible</label>
+        <input type="boolean" name="edible"> --}} {{!-- Hidden for all devices --}}
+        <div class="hide">
+            <label for="img">image</label>
+            <input type="string" name="img" value="/images/savory.jpg">
+        </div>
 
-</form>
+
+        <button type="submit" class="btn btn-small waves-effect green lighten-2">Create</button>
+
+    </form>

@@ -133,30 +133,30 @@ router.put('/:plantId', (req, res) => {
     // DELETE
 
     router.get('/:plantId/delete', (req, res) => {
-        
-            // GRAB the garden ID from the parameters
-            const gardenId = req.params.gardenId
-            
-            // GRAB the plant ID from the parameters
-            const plantId = req.params.plantId
-        
-            // USE the gardenModel to find the garden by ID
-            GardenModel.findById(gardenId)
-                .then((garden) => {
-                    // THEN once the garden has been returned,
-                    // REMOVE the plants from the garden's plants array
-                    const plant = garden.plants.id(plantId).remove()
-        
-                    // THEN save the garden and return the PROMISE
-                    return garden.save()
-                    console.log(plantId)
-                })
-                .then(() => {
-                    // THEN once the garden has saved, redirect to the 
-                    // garden's plantss INDEX page
-                    res.redirect(`/gardens/`)
-                })
+
+    // GRAB the garden ID from the parameters
+    const gardenId = req.params.gardenId
+    
+    // GRAB the plant ID from the parameters
+    const plantId = req.params.plantId
+
+    // USE the gardenModel to find the garden by ID
+    GardenModel.findById(gardenId)
+        .then((garden) => {
+            // THEN once the garden has been returned,
+            // REMOVE the plants from the garden's plants array
+            const plant = garden.plants.id(plantId).remove()
+
+            // THEN save the garden and return the PROMISE
+            return garden.save()
+            console.log(plantId)
         })
+        .then(() => {
+            // THEN once the garden has saved, redirect to the 
+            // garden's plantss INDEX page
+            res.redirect(`/gardens/`)
+        })
+})
         
 
 

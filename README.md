@@ -14,8 +14,10 @@
 * Materialize
 * Photoshop
 
-##### Functionality
+##### Functionality:
 This application will allow you to keep track of the plants in your garden -- presently, only your herb garden. A user can jump on and add plants, update their description plants, and manage the cost and quantity. 
+Three models, garden, plants, and users. Plants and Users are fully built out - complete restful routes for each.
+
 
 
 #### For the Future: 
@@ -23,13 +25,16 @@ This application will allow you to keep track of the plants in your garden -- pr
 * User input on the images that are generated. Perhaps they can select from a list of prefilled images via a dropdown menu. 
 * Ability to upload your garden layout or create it on the page.
 * Map that shows where in your garden these plants are planted.
+* User's being integrated into the site more so that when they login, they are updating their own garden and no one elses. 
+* User's name be displayed when the user signs in
+
 
 
 [Deployed on Heroku](https://immense-ravine-33710.herokuapp.com/ "Up the Garden Path")
 
 [User Stories](https://trello.com/b/tsZ1NUtB/wdi-project-2 "Trello")
 
-[Portfolio Side] ()
+[Portfolio Site] (http://usher-railways-74478.bitballoon.com/)
 
 ### Wireframe & ERD:
 
