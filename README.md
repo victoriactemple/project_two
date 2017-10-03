@@ -37,7 +37,7 @@ Three models, garden, plants, and users. Plants and Users are fully built out - 
 
 [Portfolio Site](http://usher-railways-74478.bitballoon.com/ "Portfolio Site")
 
-[GitHub](https://github.com/victoriactemple/project_two/blob/master/README.md "Victoria Project Github Page")
+[GitHub](https://github.com/victoriactemple "Victoria Project Github Page")
 
 ### Wireframe & ERD:
 
