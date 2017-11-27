@@ -20,21 +20,27 @@
 <body>
 
 
-  <div class="navbar-fixed">
+  {{!-- <div class="navbar-fixed"> --}}
     <nav class="" role="navigation">
-      <div class="container">
+      
         <div class="nav-wrapper">
           <div id="logo-container">
-            <a href="/" class="left brand-logo black-text">garden inventory</a>
+            <a href="/" class="left brand-logo black-text hide-on-med-and-down">garden inventory</a>
             <div class="menu-container">
-              <ul class="right black-text">
+              <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons black-text">menu</i></a>
+              <ul class="right black-text hide-on-med-and-down">
+                <li><a href="/" class="black-text">home</a></li>
+                <li><a href="/gardens" class="black-text">herb garden</a></li>
+                <li><a href="/users" class="black-text">users</a></li>
+              </ul>
+                <ul class="side-nav" id="mobile-demo">
                 <li><a href="/" class="black-text">home</a></li>
                 <li><a href="/gardens" class="black-text">herb garden</a></li>
                 <li><a href="/users" class="black-text">users</a></li>
               </ul>
             </div>
           </div>
-        </div>
+      
       </div>
     </nav>
   </div>

@@ -33,7 +33,9 @@ main {
 
 .new-plant{
   position: relative;
-  left: 1200px;
+  /* left: 1200px; */
+  text-align: right;
+  margin-right: 12px;
 }
 
 .par-text{
@@ -51,7 +53,13 @@ h2{
 
 li a{
   color: black;
+  margin-right: 20px;
 }
+
+.brand-logo{
+  margin-left: 20px;
+}
+
 .title {
 font-family: "Poiret-One", sans-serif;
 padding-left: 10px;
