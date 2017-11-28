@@ -31,7 +31,7 @@ Three models, garden, plants, and users. Plants and Users are fully built out - 
 
 
 
-[Deployed on Heroku](https://immense-ravine-33710.herokuapp.com/ "Up the Garden Path")
+[Deployed on Heroku](https://gardeninventory.herokuapp.com/ "Up the Garden Path")
 
 [User Stories](https://trello.com/b/tsZ1NUtB/wdi-project-2 "Trello")
 
