@@ -38,6 +38,20 @@ main {
   margin-right: 12px;
 }
 
+.plant-description{
+  margin-top: 16px;
+}
+
+.return-to-garden{
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.price-qty{
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
 .par-text{
   font-family: "didiact gothic", sans-serif;
 }

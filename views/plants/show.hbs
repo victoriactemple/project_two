@@ -16,23 +16,15 @@
         <a href="/gardens/{{garden._id}}/plants/{{plant._id}}/delete" class="btn btn-small waves-effect orange accent-1">Delete</a>
         </span>
 
-            <div>
+            <div class="plant-description">
             {{plant.description}}
             </div>
+            <div class="price-qty">
             <h6>Price: $ {{plant.price}} per plant</h6>
             <h6>Quantity: {{plant.qty}}</h6>
-
-
-            {{!-- <div>
-                <a href="/gardens/{{garden._id}}/plants/{{plant._id}}/edit" class="btn btn-small waves-effect green lighten-2">Edit Plant</a>
             </div>
-            <div>
-                <a href="/gardens/{{garden._id}}/plants/{{plant._id}}/delete" class="btn btn-small waves-effect green lighten-2">Delete Plant</a>
-            </div> --}}
-
-
       
-            <div>
+            <div class="return-to-garden">
                 <a href="/gardens" class="btn btn-small waves-effect green lighten-2">Return to garden</a>
             </div>
 
